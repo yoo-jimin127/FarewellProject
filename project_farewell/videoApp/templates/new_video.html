@@ -1,0 +1,10 @@
+<h1>Write your video</h1>
+<form action="{%url 'createVideo'%}" method="post">
+    {%csrf_token%}
+    <p>제목 : <input type="text" name = "title"> </p>
+    <p>작성자 : <input type="text" name = "writer"> </p>
+    <p> youtube 속성 : <input type="text" name="youtube"> </p>
+    
+    <button type="submit"> 작성하기 </button>
+
+</form> 

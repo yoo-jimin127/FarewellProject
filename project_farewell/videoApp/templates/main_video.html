@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farewell</title>
+</head>
+<body>
+    <h1>video main</h1>
+    <h3>어쩌구 저쩌구 감상적인 말1</h3>
+    <div>
+        <a href="{%url 'newVideo'%}"> 게시물 작성 </a>
+    </div>
+    {%for video in videos%}             
+        제목 :  {{video.title}} <br>                  <!-- 비디오 제목-->
+        작성자 : {{video.writer}} <br>                <!-- 비디오 작성자-->
+        작성날짜 : {{video.pub_date}} <br>            <!-- 작성 날짜-->
+        <a href = "{%url 'detailVideo' video.id %}">여기에 썸네일 들어감. 클릭하면 디테일로</a> <br><br><!-- views.py의 detail_video 실행하면서 id도 넘겨줌-->
+    {% endfor %}
+</body>
+</html> 

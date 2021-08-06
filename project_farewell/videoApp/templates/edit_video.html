@@ -1,0 +1,10 @@
+<h1>Edit your video</h1>
+<form action="{%url 'updateVideo' video.id%}" method="post">
+    {%csrf_token%}
+    <p>제목 : <input type="text" name = "title" value = "{{video.title}}" ></p> <!-- views.py의 edit함수 키값이 video니까 video.title로  -->
+    <p>작성자 : <input type="text" name = "writer" value ="{{video.writer}}"></p>
+    <p> youtube 속성 : <input type="text" name="youtube" value ="{{video.youtube}}"></p>
+    
+    <button type="submit"> 작성하기 </button>
+
+</form> 

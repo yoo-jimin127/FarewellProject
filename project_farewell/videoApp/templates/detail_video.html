@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3번째 페이지</title>
+</head>
+<body>
+    <h1>detail page</h1>
+    <h2>여기에 동영상이 들어옴</h2>
+    제목 : {{video.title}}<br>
+    작성자 : {{video.writer}}<br>    
+    작성날짜 : {{video.pub_date}}<br>
+
+    <a href="{%url 'editVideo' video.id%}">수정하기</a> <!--  views.py에 edit 함수 실행하면서 id도 넘겨줌-->
+    <a href="{%url 'deleteVideo' video.id%}"> 삭제하기</a>
+</body>
+</html>
