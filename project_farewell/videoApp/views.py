@@ -49,4 +49,4 @@ def updateVideo(request,id) :
 def deleteVideo(request,id) : 
     delete_video = Video.objects.get(id=id)
     delete_video.delete()
-    return redirect('mainVideo')                       # home이 아닌 mainVideo로 돌아감 : 비디오 메인페이지로 돌아감 <- 홈으로 수정해야할 수도 있음
+    return redirect('home')                       # home이 아닌 mainVideo로 돌아감 : 비디오 메인페이지로 돌아감 <- 홈으로 수정해야할 수도 있음
