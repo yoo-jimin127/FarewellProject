@@ -24,11 +24,11 @@
 
 
     {%for blog in blogs%}             
-        제목 :  {{blog.title}} <br>                <!-- 비디오 제목-->
-        작성자 : {{blog.writer}} <br>               <!-- 비디오 작성자-->
+        제목 :  {{blog.title}} <br>                <!--  제목-->
+        작성자 : {{blog.writer}} <br>               <!-- 작성자-->
         작성날짜 : {{blog.pub_date}} <br>              <!-- 작성 날짜-->
         상세설명 : {{blog.summary}} <br>
-        <a href = "{%url 'detailBlog' blog.id %}"> 여기 클릭 </a> <br><br><!-- views.py의 detail_video 실행하면서 id도 넘겨줌-->
+        <a href = "{%url 'detailBlog' blog.id %}"> 여기 클릭하면 디테일로 </a> <br><br><!-- views.py의 detailBlog 실행하면서 id도 넘겨줌-->
     {% endfor %}
 
 </body>

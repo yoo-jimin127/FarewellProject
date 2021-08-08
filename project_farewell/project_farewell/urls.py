@@ -9,6 +9,8 @@ urlpatterns = [
     path('', home, name = "home"),                    # path('url 주소', views.py에 있는 함수명, name =  "namespace" html에서 접근가능한 이름 지정)
     path('videoApp/', include('videoApp.urls')), 
     path('account/', include('account.urls')),
+    path('blogApp/', include('blogApp.urls')), 
+    
     # path('main/',mainVideo, name = "mainVideo"),
     # path('<str:id>', detailVideo, name="detailVideo"), # '<str:id>' 는 path converter
     # path('new/',newVideo,name="newVideo"), 
