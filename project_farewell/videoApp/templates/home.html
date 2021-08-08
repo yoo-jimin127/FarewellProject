@@ -28,7 +28,7 @@
         작성자 : {{video.writer}} <br>               <!-- 비디오 작성자-->
         작성날짜 : {{video.pub_date}} <br>              <!-- 작성 날짜-->
         상세설명 : {{video.summary}} <br>
-        <a href = "{%url 'detailVideo' video.id %}">여기에 썸네일 들어감. 클릭하면 디테일로</a> <br><br><!-- views.py의 detail_video 실행하면서 id도 넘겨줌-->
+        <a href = "{%url 'detailVideo' video.id %}"><img src="{{video.image.url}}" alt=""></a> <br><br><!-- views.py의 detail_video 실행하면서 id도 넘겨줌-->
     {% endfor %}
 
     <div>
