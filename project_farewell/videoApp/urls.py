@@ -12,4 +12,13 @@ urlpatterns = [
     path('edit/<str:id>', editVideo, name="editVideo"),
     path('update/<str:id>', updateVideo, name="updateVideo"),
     path('delete/<str:id>', deleteVideo, name="deleteVideo"),
+    path('main2/',mainBlog,name="mainBlog"),
+    path('2/<str:id>', detailBlog, name="detailBlog"),
+    path('new2/', newBlog, name="newBlog"),
+    path('create2/', createBlog, name="createBlog"),
+    path('edit2/<str:id>', editBlog, name="editBlog"),
+    path('update2/<str:id>', updateBlog, name="updateBlog"),
+    path('delete2/<str:id>', deleteBlog, name="deleteBlog"),
+    
+
 ]

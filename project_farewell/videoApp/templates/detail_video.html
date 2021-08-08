@@ -23,7 +23,17 @@
     {% endif %}
 
     <a href="{%url 'editVideo' video.id%}">수정하기</a> <!--  views.py에 edit 함수 실행하면서 id도 넘겨줌-->
-    <a href="{%url 'deleteVideo' video.id%}"> 삭제하기</a>
+    <a href="{%url 'deleteVideo' video.id%}"> 삭제하기</a> <br><br>
+
+
+    {%for video in videos%}             
+        제목 :  {{video.title}} <br>                <!-- 비디오 제목-->
+        작성자 : {{video.writer}} <br>               <!-- 비디오 작성자-->
+        작성날짜 : {{video.pub_date}} <br>              <!-- 작성 날짜-->
+        상세설명 : {{video.summary}} <br>
+        <a href = "{%url 'detailVideo' video.id %}"><img src="{{video.image.url}}" alt=""></a> <br><br><!-- views.py의 detail_video 실행하면서 id도 넘겨줌-->
+    {% endfor %}
+
 </body>
 </html>
 

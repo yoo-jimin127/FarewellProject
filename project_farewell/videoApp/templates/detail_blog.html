@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% block content %} 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3번째 페이지</title>
+</head>
+<body>
+    <h1>detail page</h1>
+    <h2>여기에 동영상이 들어옴</h2>
+    <hr>
+    제목 : {{blog.title}}<br>
+    작성자 : {{blog.writer}}<br>    
+    작성날짜 : {{blog.pub_date}}<br>
+    상세설명 : {{blog.body}} <br>
+    <hr>
+
+  <a href="{%url 'editBlog' blog.id%}">수정하기</a> <!--  views.py에 edit 함수 실행하면서 id도 넘겨줌-->
+   <a href="{%url 'deleteBlog' blog.id%}"> 삭제하기</a> <br><br> 
+
+
+    {%for blog in blogs%}             
+        제목 :  {{blog.title}} <br>                <!-- 비디오 제목-->
+        작성자 : {{blog.writer}} <br>               <!-- 비디오 작성자-->
+        작성날짜 : {{blog.pub_date}} <br>              <!-- 작성 날짜-->
+        상세설명 : {{blog.summary}} <br>
+        <a href = "{%url 'detailBlog' blog.id %}"> 여기 클릭 </a> <br><br><!-- views.py의 detail_video 실행하면서 id도 넘겨줌-->
+    {% endfor %}
+
+</body>
+</html>
+
+{% endblock %}
