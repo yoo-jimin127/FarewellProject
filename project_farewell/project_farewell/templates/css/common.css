@@ -1,0 +1,80 @@
+/* 공통 css */
+body {
+    background-color: #121212;
+    font-family: "Noto Sans KR", sans-serif;
+    letter-spacing: -0.07em;
+    line-height: 1.5;
+    font-size: 15px;
+    color: #ebeaea;
+  }
+  
+  .inner {
+    width: 1280px;
+    margin: 0 auto;
+    position: relative;
+  }
+  
+  .inner__content {
+    width: 1100px;
+    margin: 0 auto;
+    position: relative;
+  }
+  
+  /* 헤더 */
+  header {
+    background-color: #121212;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 99;
+  }
+  
+  header > .inner {
+    height: 60px;
+  }
+  
+  header .logo {
+    display: flex;
+    align-items: center;
+    height: 60px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto 0;
+    text-decoration: none;
+  }
+  
+  header .logo .logo__img {
+    height: 40px;
+    margin-right: 5px;
+  }
+  
+  header .logo .logo__title {
+    height: 24px;
+  }
+  
+  header .submenu {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto 0;
+  }
+  
+  header .submenu li a {
+    text-decoration: none;
+    color: #ebeaea;
+  }
+  
+  header .submenu li a:hover {
+    font-weight: 700;
+    color: #ff929e;
+  }
+  
+  header .submenu li + li {
+    margin-left: 37px;
+  }
+  
