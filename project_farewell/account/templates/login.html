@@ -1,14 +1,56 @@
 {% extends 'base.html' %}
 {% block content %} 
 
-<h1>Log In</h1>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<form action="{% url 'login' %}" method="post">
-    {% csrf_token %}
-    {{form.as_p}}
- 
-    <button type="submit"> 로그인 </button>
+    {% load static %}
+    <!--템플릿부분 시작-->
+    <link rel="icon" href="{% static 'fromFarewell.png' %}" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css"
+    />
+    <!-- Google 폰트 불러오기 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!--구글 머테리얼 아이콘즈 불러오기-->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'common.css' %}">
+    <link rel="stylesheet" href="{% static 'login.css' %}">
+    <!--템플릿부분 끝-->
+    <title>Log In</title>
+  </head>
 
-</form>
+  <body>
+        <div class="bodyContent">
+            <h1>
+                <img class="logoImg" src="{% static 'fromFarewell.png' %}" alt="fromFarewellLogo"/>오늘은 어떤 이야기를 들려드릴까요?
+            </h1>
+            <br><br><br>
 
-{% endblock %}
+            <form action="{% url 'login' %}" method="post">
+                {% csrf_token %}
+                {{form.as_p}}
+                <br><br>
+                <button type="submit" class="loginBtn"> 로그인 </button>
+        
+            </form>
+            <div> 아직 회원이 아니신가요?</div>
+        
+            {% endblock %}
+        </div>
+    </body>
+</html>
