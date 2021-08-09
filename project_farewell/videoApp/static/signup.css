@@ -3,6 +3,11 @@
     height: 40px;
 }
 
+.signup_logo {
+    margin-left: 15px;
+    margin-bottom: 10px;
+}
+
 .signupBtn {
     background-color: #ff929e;
     color: #ffffff;
