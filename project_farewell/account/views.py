@@ -22,7 +22,7 @@ def logout_view(request):   # 로그아웃 기능
     logout(request)
     return redirect("home")
 
-def register_view(request):
+def register_view(request):  #회원가입 기능
     if request.method == "POST":
         form = UserCreationForm(request.POST)
         if form.is_valid():

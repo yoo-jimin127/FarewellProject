@@ -1,10 +1,11 @@
 .logoImg {
     width: 40px;
     height: 40px;
+    margin-left: 400px;
 }
 
 .login_logo {
-    margin-left: 15px;
+    margin-left: 415px;
     margin-bottom: 10px;
 }
 
@@ -16,10 +17,14 @@
     margin-top: 30px;
     width: 100px;
     height: 30px;
-    margin-left: 420px;
+    margin-left: 720px;
     border-radius: 15px;
     outline: none;
     border: none;
 
     cursor: pointer;
 }
+
+.login_form {
+    margin-left: 300px;
+  }
