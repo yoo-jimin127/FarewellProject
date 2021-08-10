@@ -40,7 +40,7 @@
           height: 30px;
           border-radius: 15px;
           margin-top: 15px;
-          margin-left: 100px;
+          margin-left: 250px;
           opacity: 70%;
         }
       </style>
@@ -51,16 +51,16 @@
             <h1>
                 <img class="logoImg" src="{% static 'fromFarewell.png' %}" alt="fromFarewellLogo"/><img class="login_ment" src="{% static 'login_logo.png' %}" alt="오늘은 어떤 이야기를 들려드릴까요?"/>
             </h1>
-            <br><br><br>
+            <br>
 
             <form class="login_form" action="{% url 'login' %}" method="post">
                 {% csrf_token %}
                 {{form.as_p}}
-                <br><br>
+    
                 <button type="submit" class="loginBtn"> 로그인 </button>
-        
             </form>
-            <div> 아직 회원이 아니신가요?</div>
+            <br>
+            <div class="signupMsg"> 아직 회원이 아니신가요?<a href="signup.html" class="gotoBtn">회원가입</a></div>
         
             {% endblock %}
         </div>

@@ -1,11 +1,11 @@
 .logoImg {
     width: 40px;
     height: 40px;
-    margin-left: 400px;
+    margin-left: 500px;
 }
 
 .login_logo {
-    margin-left: 415px;
+    margin-left: 515px;
     margin-bottom: 10px;
 }
 
@@ -17,7 +17,7 @@
     margin-top: 30px;
     width: 100px;
     height: 30px;
-    margin-left: 720px;
+    margin-left: 350px;
     border-radius: 15px;
     outline: none;
     border: none;
@@ -28,3 +28,16 @@
 .login_form {
     margin-left: 300px;
   }
+
+.signupMsg {
+    margin-left: 565px;
+    color: #999797;
+}
+
+.gotoBtn {
+    text-decoration: none;
+    color: #92B8FF;
+    font-size: 18px;
+    font-weight: bold;
+    margin-left: 15px;
+}
