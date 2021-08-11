@@ -39,7 +39,9 @@
     {% load static %}
     <!-- 여기에 다른 코드 입력-->
     <div class="moviePostForm__wrapper">
-      <form class="moviePostForm">
+      <form class="moviePostForm" action="{%url 'createVideo'%}" method="post" enctype="multipart/form-data">
+        {%csrf_token%}
+        {{form.as_p}}
         <div class="moviePostForm__header">
           <div class="thumbnail__wrapper"></div>
           <div class="moviePostForm__header__inputs">
@@ -56,21 +58,22 @@
             <input
               type="file"
               id="input__thumbnail"
-              name="thumbnail"
+              name="image"
               accept="image/*"
             />
             <input
               type="text"
               id="input__youtubeId"
-              name="youtubeId"
+              name="youtube"
               placeholder="유튜브 영상의 ID을 입력해주세요."
             />
+            <p>작성자 : <input type="text" name = "writer"> </p> <!-- 작성자없으면  multivaluedictkeyerror 나와서 일단 넣어놓음-->
           </div>
         </div>
         <div class="moviePostForm__main">
           <div class="movie__preview"></div>
           <textarea
-            name="description"
+            name="body"
             id="description"
             placeholder="영상의 설명을 작성해주세요"
           ></textarea>
