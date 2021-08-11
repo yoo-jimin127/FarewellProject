@@ -40,7 +40,7 @@
 
     <div class="inner__content">
         <div class="pageInfo">
-            <a href="{%url 'newVideo'%}"> 게시물 작성 </a>  <!-- 게시물 작성 css 추가해야함-->
+            <a href="{%url 'newVideo'%}"> 게시물 작성 </a>          <!-- 게시물 작성 css 추가해야함-->
             <h1>video main</h1>
             <h2>어쩌구 저쩌구 감상적인 말1</h2>
         </div>
@@ -48,12 +48,16 @@
         {%for video in videos%}  
         <a class = "movieItemBox"href = "{%url 'detailVideo' video.id %}">           
             <img src="{{video.image.url}}" class = "movieImage">
+            <div class="movieInfo">
+                <img src="{% static 'skyblue.png' %}" class="writerImage" />     <!-- 작성자 이미지 바꿔야함-->
+
             <div class="movieItemBoxText">
                 <p class="title"> {{video.title}} </p>
                 <p class="writer"> {{video.writer}}</p>
                 <p class="pubDate"> {{video.pub_date}}</p>
               </div>
-        <!--상세설명 : {{video.summary}}--> 
+            </div>
+                <!--상세설명 : {{video.summary}}--> 
         </a> <!-- views.py의 detail_video 실행하면서 id도 넘겨줌-->
     {% endfor %}
         </div>
