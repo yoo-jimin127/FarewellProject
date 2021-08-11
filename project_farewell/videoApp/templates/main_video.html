@@ -39,9 +39,11 @@
 <body>
 
     <div class="inner__content">
-        <div class="pageInfo">
-            <a href="{%url 'newVideo'%}"> 게시물 작성 </a>          <!-- 게시물 작성 css 추가해야함-->
+        <div class="pageInfo"> 
+          <dic class="titleButtonBox">       
             <h1>video main</h1>
+            <a href="{%url 'newVideo'%}"> <img class="writeButton" src="{% static 'writeButton.png' %}"> </a>
+          </dic>  
             <h2>어쩌구 저쩌구 감상적인 말1</h2>
         </div>
         <div class = "container2">
@@ -49,7 +51,7 @@
         <a class = "movieItemBox"href = "{%url 'detailVideo' video.id %}">           
             <img src="{{video.image.url}}" class = "movieImage">
             <div class="movieInfo">
-                <img src="{% static 'skyblue.png' %}" class="writerImage" />     <!-- 작성자 이미지 바꿔야함-->
+                <img src="{% static 'fromFarewell.png' %}" class="writerImage" /> 
 
             <div class="movieItemBoxText">
                 <p class="title"> {{video.title}} </p>
@@ -57,8 +59,8 @@
                 <p class="pubDate"> {{video.pub_date}}</p>
               </div>
             </div>
-                <!--상세설명 : {{video.summary}}--> 
-        </a> <!-- views.py의 detail_video 실행하면서 id도 넘겨줌-->
+              
+        </a> 
     {% endfor %}
         </div>
     

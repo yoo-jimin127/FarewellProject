@@ -2,8 +2,13 @@
 
 .pageInfo {
     margin-bottom:20px;
+    display:flex;
+    flex-direction: column;
 }
+.titleButtonBox {
+    display:flex;
 
+}
 .container2 {
     display:flex;
     flex-wrap: wrap;
@@ -72,4 +77,11 @@ p, h1, h2 {
 .pubDate {
     color:#999797;
     font-size:12px;
+}
+
+.writeButton {
+    width:93px;
+    height:35px;
+    margin-left:15px;
+    margin-top:7px;
 }
