@@ -22,27 +22,26 @@ def detailVideo(request,id):                                         #영상 1�
 
 
 def newVideo(request):
-    form = VideoForm()
-    return render(request,'new_video.html', {'form':form})
+    return render(request,'new_video.html')
 
 
 def createVideo(request):                           # new_video.html에서 작성한 것들의 정보를 받음    
-    form = VideoForm(request.POST, request.FILES)
-    if form.is_valid(): # form의 유효성 검사
-        new_video = form.save(commit=False) # new_video에 그 값을 임시 저장
-        new_video.pub_date = timezone.now() # pub_date 따로 받음
-        new_video.save()    # 저장
-        return redirect('detailVideo', new_video.id) #유효할 경우 detailVideo로 이동
-    return redirect('home') #유효하지 않을 경우 home으로 이동
-
-    # new_video = Video()                             # Video 의 새로운 객체를 new_video로 만들기      
-    # new_video.image = request.FILES['image']              
-    # new_video.title = request.POST['title']         # new_video.html에서 작성한 제목을 new_video.title에 할당
-    # new_video.writer =request.POST['writer']
-    # new_video.youtube =request.POST['youtube']
-    # new_video.pub_date = timezone.now()             # 작성한 시간을  new_video.pub_date에 할당
-    # new_video.save()                                # 위의 내용들을 DB에 저장해주는 함수
-    # return redirect('detailVideo', new_video.id)   # detailVideo로 돌아감 
+    new_video = Video()                             # Video 의 새로운 객체를 new_video로 만들기      
+    new_video.image = request.FILES['image']              
+    new_video.title = request.POST['title']         # new_video.html에서 작성한 제목을 new_video.title에 할당
+    new_video.writer =request.POST['writer']
+    new_video.youtube =request.POST['youtube']
+    new_video.pub_date = timezone.now()             # 작성한 시간을  new_video.pub_date에 할당
+    new_video.save()                                # 위의 내용들을 DB에 저장해주는 함수
+    return redirect('detailVideo', new_video.id)   # detailVideo로 돌아감 
+    
+    # form = VideoForm(request.POST, request.FILES)
+    # if form.is_valid(): # form의 유효성 검사
+    #     new_video = form.save(commit=False) # new_video에 그 값을 임시 저장
+    #     new_video.pub_date = timezone.now() # pub_date 따로 받음
+    #     new_video.save()    # 저장
+    #     return redirect('detailVideo', new_video.id) #유효할 경우 detailVideo로 이동
+    # return redirect('home') #유효하지 않을 경우 home으로 이동
 
 
 def editVideo(request,id) :
