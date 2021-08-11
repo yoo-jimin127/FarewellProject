@@ -45,6 +45,7 @@
             <h1>video main</h1>
             <h2>어쩌구 저쩌구 감상적인 말1</h2>
         </div>
+        <div class = "container">
         {%for video in videos%}  
         <a class = "movieItemBox"href = "{%url 'detailVideo' video.id %}">           
             <img src="{{video.image.url}}" class = "movieImage">
@@ -56,6 +57,7 @@
         <!--상세설명 : {{video.summary}}-->
         </a> <!-- views.py의 detail_video 실행하면서 id도 넘겨줌-->
     {% endfor %}
+</div>
     
 </div>
 </div>
