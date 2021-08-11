@@ -4,24 +4,61 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Farewell</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--템플릿부분 시작-->
+    
+    {% load static %}
+    <link rel="icon" href="imgs/fromFarewell.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css"
+    />
+    <!-- Google 폰트 불러오기 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!--구글 머테리얼 아이콘즈 불러오기-->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <link rel="stylesheet" href="{% static 'common.css' %}" />
+    <!--템플릿부분 끝-->
+
+    <!--추가적인 헤더-->
+    <link rel="stylesheet" href=  "{% static 'movieList.css' %}"/>
+    <title>이별에서</title>
+    <!--추가적인 헤더 끝-->
 </head>
 <body>
-    <h1>video main</h1>
-    <h3>어쩌구 저쩌구 감상적인 말1</h3>
-    <div>
-        <a href="{%url 'newVideo'%}"> 게시물 작성 </a>
+
+    <a href="{%url 'newVideo'%}"> 게시물 작성 </a> 
     </div>
-    {%for video in videos%}             
-        제목 :  {{video.title}} <br>                  <!-- 비디오 제목-->
-        작성자 : {{video.writer}} <br>                <!-- 비디오 작성자-->
-        작성날짜 : {{video.pub_date}} <br>            <!-- 작성 날짜-->
-        상세설명 : {{video.summary}} <br>
-        <a href = "{%url 'detailVideo' video.id %}"><img src="{{video.image.url}}" alt=""></a> <br><br><!-- views.py의 detail_video 실행하면서 id도 넘겨줌-->
+    <div class="inner__content">
+        <div class="pageInfo">
+            <h1>video main</h1>
+            <h2>어쩌구 저쩌구 감상적인 말1</h2>
+        </div>
+        {%for video in videos%}  
+        <a class = "movieItemBox"href = "{%url 'detailVideo' video.id %}">           
+            <img src="{{video.image.url}}" class = "movieImage">
+            <div class="movieItemBoxText">
+                <p class="title"> {{video.title}} </p>
+                <p class="writer"> {{video.writer}}</p>
+                <p class="pubDate"> {{video.pub_date}}</p>
+              </div>
+        <!--상세설명 : {{video.summary}}-->
+        </a> <!-- views.py의 detail_video 실행하면서 id도 넘겨줌-->
     {% endfor %}
+    
+</div>
+</div>
 </body>
 </html> 
 

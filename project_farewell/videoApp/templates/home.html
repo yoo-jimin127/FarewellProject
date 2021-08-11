@@ -9,20 +9,56 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--템플릿부분 시작-->
+    <link rel="icon" href="imgs/fromFarewell.png" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css"
+    />
+    <!-- Google 폰트 불러오기 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <!--구글 머테리얼 아이콘즈 불러오기-->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <link rel="stylesheet" href="./css/common.css" />
+    <!--템플릿부분 끝-->
+
+    <!--추가적인 헤더-->
+    <!--swiper-->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.css" />
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+    <script defer src="./js/landingPage.js"></script>
+    <link rel="stylesheet" href="./css/landingPage.css" />
+    <!--추가적인 헤더 끝-->
     <title>Farewell</title>
 </head>
 <body>
-    <h1>Farewell Project</h1>
-    <h3>너는 어느 별에 있니? 난 이별에 있어</h3>
-    <div>
-        <a href="{%url 'mainVideo'%}">더보기</a>           <!-- 더보기 누르면 비디오 main 페이지로 이동-->
-    </div>
-    
-    <!--  <a href="{%url 'newVideo'%}"> 게시물 작성 </a>-->      
+    <section class="movie">
+        <div class="inner__content">
+          <div class="movie__title">
+            <div class="movie__title__main">
+              <h1>Farewell Project</h1>
+              <a href="{%url 'mainVideo'%}">더보기</a>           <!-- 더보기 누르면 비디오 main 페이지로 이동-->
+            </div>
+            <h2 class="movie__title__sub">너는 어느 별에 있니? 난 이별에 있어</h2>
+          </div>
 
+          
+    <!--  <a href="{%url 'newVideo'%}"> 게시물 작성 </a>-->      
+    
+   
     {%for video in videos%}             
         제목 :  {{video.title}} <br>                <!-- 비디오 제목-->
         작성자 : {{video.writer}} <br>               <!-- 비디오 작성자-->

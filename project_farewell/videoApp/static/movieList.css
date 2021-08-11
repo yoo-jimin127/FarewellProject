@@ -1,0 +1,78 @@
+body {
+    background-color: #121212;
+    align-content: center;
+    margin-left:10%;
+    margin-right:10%;
+}
+
+.pageInfo {
+    margin-bottom:20px;
+}
+
+.container {
+    display:flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.movieItemBox {
+    width:345px;
+    height:298px;
+    text-decoration: none;
+    margin-bottom:10px;
+}
+
+.movieItemBoxText {
+    flex-direction: column;
+    padding-left:10px;
+}
+
+.movieImage {
+    width:345px;
+    height:200px;
+    border-radius: 5px;
+    vertical-align: top;
+}
+
+.writerImage {
+    border-radius:100%;
+    width:45px;
+    height:45px;
+
+}
+
+.movieInfo {
+    width:354px;
+    height:90px;
+    display:flex;
+    flex-direction: row;
+    padding-top:10px;
+}
+
+h1 {
+    font-size:30px;
+}
+
+h2 {
+    font-size:20px;
+}
+
+p, h1, h2 {
+    color:#ebeaea;
+}
+
+.title {
+    font-size:15px;
+    padding-bottom:5px;
+}
+
+.writer {
+    color:#999797;
+    font-size:12px;
+}
+
+.pubDate {
+    color:#999797;
+    font-size:12px;
+}
