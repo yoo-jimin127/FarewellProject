@@ -44,7 +44,7 @@
             <h1>video main</h1>
             <h2>어쩌구 저쩌구 감상적인 말1</h2>
         </div>
-        <div class = "container">
+        <div class = "container2">
         {%for video in videos%}  
         <a class = "movieItemBox"href = "{%url 'detailVideo' video.id %}">           
             <img src="{{video.image.url}}" class = "movieImage">

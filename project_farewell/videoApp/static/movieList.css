@@ -1,15 +1,10 @@
-body {
-    background-color: #121212;
-    align-content: center;
-    margin-left:10%;
-    margin-right:10%;
-}
+
 
 .pageInfo {
     margin-bottom:20px;
 }
 
-.container {
+.container2 {
     display:flex;
     flex-wrap: wrap;
     flex-direction: row;
