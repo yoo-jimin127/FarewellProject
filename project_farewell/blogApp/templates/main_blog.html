@@ -7,6 +7,90 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    {% load static %}
+    <!--템플릿부분 시작-->
+    <link rel="icon" href="{% static 'fromFarewell.png' %}" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css"
+    />
+
+    <!--css 초기화-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css" />
+
+    <!-- Google 폰트 불러오기 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet" />
+
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'common.css' %}">
+    <link rel="stylesheet" href="{% static 'community.css' %}">
+
+    <title>blogMain</title>
+
+</head>
+<body>
+    <div class="inner__content">
+        <div class="pageInfo">
+            <h1>커뮤니티</h1>
+            <h2>" 함께였었던 너, 지금 어느 별에 있니? 난 아직도 이별에 있어 "</h2>
+        </div>
+
+        <div class="container">
+            {% load static %}
+            {%for blog in blogs%}    
+            <a href="{%url 'detailBlog' blog.id %}" class="postItemBox">
+                <div class="postTitleContentBox">
+                    <p class="title">{{blog.title}}</p>
+                    <p class="content"> {{blog.summary}}</p>
+                </div>
+                <div class="postWriterPubDateBox">
+                    <img src="{% static 'fromFarewell.png' %}" class="writerImage">
+                    <p class="writer">{{blog.writer}}</p>
+                    <p class="pubDate">{{blog.pub_date}}</p>
+                </div>
+            </a>
+            {% endfor %}
+
+        </div>
+    </div>
+    
+</body>
+</html>
+{% endblock %}
+
+            <!-- <a href="postDetail.html" class="postItemBox">
+                <div class="postTitleContentBox">
+                    <p class="title">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <p class="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, Auctor gravida amet consectetur vestibulum risus sodales tincidunt. Mi, at pellentesque sit a, arcu aliquam id venenatis. Id ac sollicitudin tortor...</p>
+                </div>
+                <div class="postWriterPubDateBox">
+                    <img src="skyblue.png" class="writerImage">
+                    <p class="writer">Lorem</p>
+                    <p class="pubDate">2021-07-31</p>
+                </div>
+            </a>
+            
+            <a href="postDetail.html" class="postItemBox">
+                <div class="postTitleContentBox">
+                    <p class="title">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <p class="content">Lorem ipsum dolor sit amet, consectetur adipiscing elit, Auctor gravida amet consectetur vestibulum risus sodales tincidunt. Mi, at pellentesque sit a, arcu aliquam id venenatis. Id ac sollicitudin tortor...</p>
+                </div>
+                <div class="postWriterPubDateBox">
+                    <img src="skyblue.png" class="writerImage">
+                    <p class="writer">Lorem</p>
+                    <p class="pubDate">2021-07-31</p>
+                </div>
+            </a> -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Farewell</title>
 </head>
 <body>
@@ -16,13 +100,12 @@
         <a href="{%url 'newBlog'%}"> 게시물 작성 </a>
     </div>
     {%for blog in blogs%}             
-    제목 :  {{blog.title}} <br>                  <!-- 비디오 제목-->
-    작성자 : {{blog.writer}} <br>                <!-- 비디오 작성자-->
-    작성날짜 : {{blog.pub_date}} <br>            <!-- 작성 날짜-->
+    제목 :  {{blog.title}} <br>                 
+    작성자 : {{blog.writer}} <br>            
+    작성날짜 : {{blog.pub_date}} <br>            
     상세설명 : {{blog.summary}} <br>
-    <a href = "{%url 'detailBlog' blog.id %}">여기 클릭하면 디테일로</a> <br><br><!-- views.py의 detail_video 실행하면서 id도 넘겨줌-->
-    {% endfor %}
+    <a href = "{%url 'detailBlog' blog.id %}">여기 클릭하면 디테일로</a> <br><br> -->
+    <!-- views.py의 detail_video 실행하면서 id도 넘겨줌-->
+    <!-- {% endfor %}
 </body>
-</html> 
-
-{% endblock %}
+</html>  -->

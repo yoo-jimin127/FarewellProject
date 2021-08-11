@@ -7,6 +7,50 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+    <!--css 초기화-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css" />
+    <!-- Google 폰트 불러오기 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet" />
+
+    {% load static %}
+    <link rel="icon" href="{% static 'fromFarewell.png' %}" />
+    <link rel="stylesheet" href="{% static 'common.css' %}">
+    <link rel="stylesheet" href="{% static 'postDetail.css' %}">
+
+    <title>blogDetail</title>
+</head>
+<body>
+    <div class="inner__content">
+        <div class="postInfo">
+            <img src="{% static 'fromFarewell.png' %}" class="writerImage">
+            <div class="postInfoText">
+                <p class="title">{{blog.title}}</p>
+                <div class="postWriterPubDateBox">
+                    <p class="writer">{{blog.writer}}</p>
+                    <p class="pubDate">{{blog.pub_date}}</p>
+                </div>
+            </div>
+        </div>
+        <div class="contentBox">
+            {{blog.body}}
+        </div>
+
+    </div>
+    
+</body>
+</html>
+{% endblock %}
+
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>3번째 페이지</title>
 </head>
 <body>
@@ -19,19 +63,17 @@
     상세설명 : {{blog.body}} <br>
     <hr>
 
-  <a href="{%url 'editBlog' blog.id%}">수정하기</a> <!--  views.py에 edit 함수 실행하면서 id도 넘겨줌-->
+  <a href="{%url 'editBlog' blog.id%}">수정하기</a> 
    <a href="{%url 'deleteBlog' blog.id%}"> 삭제하기</a> <br><br> 
 
 
     {%for blog in blogs%}             
-        제목 :  {{blog.title}} <br>                <!--  제목-->
-        작성자 : {{blog.writer}} <br>               <!-- 작성자-->
-        작성날짜 : {{blog.pub_date}} <br>              <!-- 작성 날짜-->
+        제목 :  {{blog.title}} <br>                
+        작성자 : {{blog.writer}} <br>        
+        작성날짜 : {{blog.pub_date}} <br>             
         상세설명 : {{blog.summary}} <br>
-        <a href = "{%url 'detailBlog' blog.id %}"> 여기 클릭하면 디테일로 </a> <br><br><!-- views.py의 detailBlog 실행하면서 id도 넘겨줌-->
+        <a href = "{%url 'detailBlog' blog.id %}"> 여기 클릭하면 디테일로 </a> <br><br>
     {% endfor %}
 
 </body>
-</html>
-
-{% endblock %}
+</html> -->

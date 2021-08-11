@@ -1,0 +1,70 @@
+.pageInfo {
+    padding-top:30px;
+    padding-bottom:20px;
+    margin-left: 20px;
+}
+.container {
+    display:flex;
+    flex-direction: column;
+    width:1099px;
+    border:solid;
+    border-radius:10px;
+    border-color:rgba(235,235,234,0.5);
+    justify-content: space-between;
+    margin-left: 250px;
+
+}
+.postItemBox + .postItemBox {
+    border-top:solid;
+    border-color:rgba(235,235,234,0.5);
+}
+.postItemBox {
+    border-color:rgba(235,235,234,0.5);
+    padding:10px;
+    padding-left:10px;
+    text-decoration: none;
+}
+.postItemBox:nth-child(2n) {
+    background-color:rgba(28,28,28);
+    align-items: center;
+}
+.postWriterPubDateBox {
+    display:flex;
+    flex-direction: row;
+    margin-top:5px;
+}
+h1 {
+    font-size: 30px;
+    color:#EBEAEA;
+    font-weight:bold;
+}
+h2 {
+    font-size:20px;
+    color:#EBEAEA;
+    font-weight:bold;
+}
+.title {
+    font-size:15px;
+    color:#EBEAEA;
+    font-weight:bold;
+}
+.content {
+    font-size:13px;
+    color:#EBEAEA;
+}
+.writerImage {
+    width:14px;
+    height:14px;
+    border-radius: 100%;
+    margin-right:10px;
+    margin-top:3px;
+}
+.writer {
+    font-size:13px;
+    color:#999797;
+}
+.pubDate {
+    font-size:13px;
+    color:#999797;
+    margin-left:5px;
+}

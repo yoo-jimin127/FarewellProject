@@ -1,0 +1,43 @@
+.postInfo {
+    display:flex;
+    padding-top:40px;
+    padding-bottom:10px;
+}
+.writerImage {
+    width:43px;
+    height:43px;
+    border-radius: 100%;
+    padding:10px;
+    margin-top:-5px;
+}
+.postInfoText {
+    display:flex;
+    flex-direction: column;
+}
+.title {
+    font-size:18px;
+    color:#EBEAEA;
+}
+.postWriterPubDateBox {
+    display:flex;
+    flex-direction: row;
+}
+.writer {
+    font-size:15px;
+    color:#999797;
+}
+.pubDate {
+    font-size:13px;
+    color:#999797;
+    padding-left:15px;
+    margin-top:2px;
+}
+.contentBox {
+    width:1099px;
+    min-height:470px;
+    border:solid;
+    border-radius:10px;
+    border-color:rgba(235,235,234,0.5);
+    padding:10px;
+    color:#EBEAEA;
+}
