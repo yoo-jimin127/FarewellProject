@@ -18,6 +18,7 @@ body {
     width: 1100px;
     margin: 0 auto;
     position: relative;
+    padding-top:60px;
   }
   
   /* 헤더 */
@@ -48,10 +49,12 @@ body {
   header .logo .logo__img {
     height: 40px;
     margin-right: 5px;
+    margin-left: 550px;
   }
   
   header .logo .logo__title {
     height: 24px;
+
   }
   
   header .submenu {
@@ -78,3 +81,8 @@ body {
     margin-left: 37px;
   }
   
+  .container {
+      margin: 100px 100px 100px;
+      position: relative;
+
+  }

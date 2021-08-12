@@ -49,10 +49,12 @@ body {
   header .logo .logo__img {
     height: 40px;
     margin-right: 5px;
+    margin-left: 550px;
   }
   
   header .logo .logo__title {
     height: 24px;
+
   }
   
   header .submenu {

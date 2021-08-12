@@ -11,6 +11,7 @@
   .moviePostForm__header {
     width: 100%;
     display: flex;
+    padding-top:80px;
   }
   
   .moviePostForm__header .thumbnail__wrapper {
