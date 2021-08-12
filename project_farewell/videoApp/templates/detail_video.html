@@ -1,5 +1,4 @@
-{% extends 'base.html' %}
-{% block content %} 
+{% extends 'base.html' %} {% block content %}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -28,9 +27,8 @@
     <link rel="stylesheet" href="./css/common.css" />
 
     {% load static %}
-    <link rel="stylesheet" href="{% static 'movieDetail.css' %}">
+    <link rel="stylesheet" href="{% static 'movieDetail.css' %}" />
     <title>Document</title>
-    
   </head>
   <body>
     <div class="inner">
@@ -38,7 +36,7 @@
         <div class="movie__main">
           <div class="movie__video">
             <iframe
-              src="https://www.youtube.com/embed/YIat2_qBk78"
+              src="https://www.youtube.com/embed/{{video.youtube}}"
               title="YouTube video player"
               frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -47,35 +45,28 @@
           </div>
           <div class="movie__info">
             {% if video.image %}
-                <img class="profile__img" src="{% static 'exImg.png' %}" />
+            <img class="profile__img" src="{% static 'exImg.png' %}" />
             {% endif %}
-            
             <div class="movie__describe">
-              <p class="movie__describe__title">
-                {{video.title}}
-              </p>
+              <p class="movie__describe__title">{{video.title}}</p>
               <span class="movie__describe__writer">{{video.writer}}</span>
               <span class="movie__describe__pub_date">{{video.pub_date}}</span>
             </div>
           </div>
-          <div class="movie__content">
-            {{video.body}}
-          </div>
+          <div class="movie__content">{{video.body}}</div>
         </div>
-        
+
         <div class="movie__side">
-            {%for video in videos%}
-                <div class="movie__card">
-                    <img src="{{video.image.url}}" alt="">
-                    <div class="movie__describe">
-                        <p class="movie__describe__title">
-                            {{video.title}}
-                        </p>
-                    <p class="movie__describe__writer">{{video.writer}}</p>
-                    <p class="movie__describe__pub_date">{{video.pub_date}}</p>
-                    </div>
-                </div>
-            {% endfor %}
+          {%for video in videos%}
+          <div class="movie__card">
+            <img src="{{video.image.url}}" alt="" />
+            <div class="movie__describe">
+              <p class="movie__describe__title">{{video.title}}</p>
+              <p class="movie__describe__writer">{{video.writer}}</p>
+              <p class="movie__describe__pub_date">{{video.pub_date}}</p>
+            </div>
+          </div>
+          {% endfor %}
         </div>
       </div>
     </div>
