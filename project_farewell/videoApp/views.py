@@ -31,6 +31,7 @@ def createVideo(request):                           # new_video.html에서 작�
     new_video.title = request.POST['title']         # new_video.html에서 작성한 제목을 new_video.title에 할당
     new_video.writer =request.POST['writer']
     new_video.youtube =request.POST['youtube']
+    new_video.body =request.POST['body']
     new_video.pub_date = timezone.now()             # 작성한 시간을  new_video.pub_date에 할당
     new_video.save()                                # 위의 내용들을 DB에 저장해주는 함수
     return redirect('detailVideo', new_video.id)   # detailVideo로 돌아감 

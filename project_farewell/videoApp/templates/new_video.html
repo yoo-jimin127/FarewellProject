@@ -1,5 +1,4 @@
-{% extends 'base.html' %}
-{% block content %} 
+{% extends 'base.html' %} {% block content %}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -27,8 +26,8 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
     />
-    <link rel="stylesheet" href="{% static 'common.css' %}">
-    <link rel="stylesheet" href="{% static 'moviePost.css' %}">
+    <link rel="stylesheet" href="{% static 'common.css' %}" />
+    <link rel="stylesheet" href="{% static 'moviePost.css' %}" />
 
     <!--템플릿부분 끝-->
     <script defer src="{% static 'moviePost.js' %}"></script>
@@ -38,9 +37,13 @@
     {% load static %}
     <!-- 여기에 다른 코드 입력-->
     <div class="moviePostForm__wrapper">
-      <form class="moviePostForm" action="{%url 'createVideo'%}" method="post" enctype="multipart/form-data">
-        {%csrf_token%}
-        {{form.as_p}}
+      <form
+        class="moviePostForm"
+        action="{%url 'createVideo'%}"
+        method="post"
+        enctype="multipart/form-data"
+      >
+        {%csrf_token%} {{form.as_p}}
         <div class="moviePostForm__header">
           <div class="thumbnail__wrapper"></div>
           <div class="moviePostForm__header__inputs">
@@ -62,38 +65,34 @@
             />
             <input
               type="text"
-              id="input__youtubeId"
-              name="youtube"
-              placeholder="유튜브 영상의 ID을 입력해주세요."
+              id="input__userName"
+              name="writer"
+              placeholder="당신의 이름을 입력해주세요."
             />
-            <p>작성자 : <input type="text" name = "writer"> </p> <!-- 작성자없으면  multivaluedictkeyerror 나와서 일단 넣어놓음-->
           </div>
         </div>
         <div class="moviePostForm__main">
-          <div class="movie__preview"></div>
+          <input
+            type="text"
+            id="input__youtubeId"
+            name="youtube"
+            placeholder="유튜브 영상의 ID을 입력해주세요."
+          />
+          <button class="input_youtube_previewBtn">미리보기</button>
+          <div class="movie__preview">
+            <img src="{% static 'youtubeExplainImg.png' %}" />
+          </div>
           <textarea
             name="body"
             id="description"
             placeholder="영상의 설명을 작성해주세요"
           ></textarea>
         </div>
-        <button type="submit"><input type="image" class="button" src="{% static 'submitButton.png' %}" /></button>
+        <button type="submit" class="moviePostForm__submitBtn">
+          <img src="{% static 'submitButton.png' %}" />
+        </button>
       </form>
     </div>
   </body>
 </html>
 {% endblock %}
-
-<!-- <h1>Write your video</h1>
-<form action="{%url 'createVideo'%}" method="post" enctype="multipart/form-data">
-    {%csrf_token%}
-    {{form.as_p}}
--->
-    <!-- <p>제목 : <input type="text" name = "title"> </p>
-    <p>작성자 : <input type="text" name = "writer"> </p>
-    <p> youtube 속성 : <input type="text" name="youtube"> </p>
-    <p>사진 : <input type="file" name="image"></p> -->
-
-    <!-- <button type="submit"> 작성하기 </button>
-
-</form>  -->
