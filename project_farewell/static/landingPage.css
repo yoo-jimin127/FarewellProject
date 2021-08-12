@@ -1,3 +1,7 @@
+.headerBlank {
+  height: 60px;
+}
+
 .movie {
   background-image: url(../imgs/movieBackground.png);
   background-size: cover;
@@ -153,4 +157,110 @@
 
 .movie .swiper-next {
   right: -70px;
+}
+
+.separator {
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.community {
+  background-image: url(../imgs/communityBackground.png);
+  background-size: cover;
+  background-position: center;
+}
+
+.community .inner__content {
+  height: 581px;
+}
+
+.community__title {
+  position: absolute;
+  top: 40px;
+}
+
+.community__title .community__title__main {
+  display: flex;
+  align-items: center;
+}
+
+.community__title .community__title__main h1 {
+  font-weight: bold;
+  font-size: 30px;
+  margin-right: 20px;
+}
+
+.community__title .community__title__main a {
+  padding: 3px 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  font-size: 13px;
+  text-decoration: none;
+  color: #ebeaea;
+}
+
+.community__title .community__title__sub {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.community__posts__wrapper {
+  position: absolute;
+  top: 138px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border: solid;
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.3);
+  justify-content: space-between;
+}
+
+.community__posts__wrapper .community__post + .community__post {
+  border-top: solid;
+  border-color: rgba(235, 235, 234, 0.5);
+}
+
+.community__post {
+  border-color: rgba(235, 235, 234, 0.5);
+  padding: 10px;
+  padding-left: 10px;
+  text-decoration: none;
+}
+
+.community__post .post__title {
+  font-size: 15px;
+  color: #ebeaea;
+  font-weight: bold;
+}
+.community__post .post__content {
+  font-size: 13px;
+  color: #ebeaea;
+}
+
+.post__subdatas {
+  display: flex;
+  flex-direction: row;
+  margin-top: 5px;
+}
+
+.post__subdatas img {
+  width: 14px;
+  height: 14px;
+  border-radius: 100%;
+  margin-right: 10px;
+  margin-top: 3px;
+}
+
+.post__subdatas .post__writer {
+  font-size: 13px;
+  color: #999797;
+}
+
+.post__subdatas .post__pubDate {
+  font-size: 13px;
+  color: #999797;
+  margin-left: 5px;
 }
