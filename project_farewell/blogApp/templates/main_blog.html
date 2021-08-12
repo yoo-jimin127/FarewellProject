@@ -1,12 +1,11 @@
-{% extends 'base.html' %}
-{% block content %} 
+{% extends 'base.html' %} {% block content %}
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     {% load static %}
 
@@ -16,45 +15,51 @@
       href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css"
     />
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css"
+    />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
 
     {% load static %}
-    <link rel="stylesheet" href="{% static 'common.css' %}">
-    <link rel="stylesheet" href="{% static 'community.css' %}">
+    <link rel="stylesheet" href="{% static 'common.css' %}" />
+    <link rel="stylesheet" href="{% static 'community.css' %}" />
 
     <title>blogMain</title>
-
-</head>
-<body>
+  </head>
+  <body>
     <div class="inner__content">
-        <div class="pageInfo">
-            <h1>커뮤니티<a href="{%url 'newBlog'%}" class="writeButton__a"><img class="writeButton" src="{% static 'writeButton.png' %}"> </a></h1>
+      <div class="pageInfo">
+        <div class="titleButtonBox">
+          <h1>Community</h1>
+          <a href="{%url 'newBlog'%}">
+            <img class="writeButton" src="{% static 'writeButton.png' %}" />
+          </a>
         </div>
-        <h2>" 함께였었던 너, 지금 어느 별에 있니? 난 아직도 이별에 있어 "</h2>
-        <br>
-        <div class="container">
-            {% load static %}
-            {%for blog in blogs%}    
-            <a href="{%url 'detailBlog' blog.id %}" class="postItemBox">
-                <div class="postTitleContentBox">
-                    <p class="title">{{blog.title}}</p>
-                    <p class="content"> {{blog.summary}}</p>
-                </div>
-                <div class="postWriterPubDateBox">
-                    <img src="{% static 'fromFarewell.png' %}" class="writerImage">
-                    <p class="writer">{{blog.writer}}</p>
-                    <p class="pubDate">{{blog.pub_date}}</p>
-                </div>
-            </a>
-            {% endfor %}
-
-        </div>
+        <h2>“ 나는 이 별에 있어, 너는 어느 별에 있니? ”</h2>
+      </div>
+      <div class="container">
+        {% load static %} {%for blog in blogs%}
+        <a href="{%url 'detailBlog' blog.id %}" class="postItemBox">
+          <div class="postTitleContentBox">
+            <p class="title">{{blog.title}}</p>
+            <p class="content">{{blog.summary}}</p>
+          </div>
+          <div class="postWriterPubDateBox">
+            <img src="{% static 'fromFarewell.png' %}" class="writerImage" />
+            <p class="writer">{{blog.writer}}</p>
+            <p class="pubDate">{{blog.pub_date}}</p>
+          </div>
+        </a>
+        {% endfor %}
+      </div>
     </div>
-    
-</body>
+  </body>
 </html>
 {% endblock %}

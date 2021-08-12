@@ -1,85 +1,77 @@
 .pageInfo {
-    padding-top:30px;
-    padding-bottom:20px;
-    margin-left: 20px;
-    display:flex;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+.titleButtonBox {
+  display: flex;
 }
 .container {
-    display:flex;
-    flex-direction: column;
-    width:1099px;
-    border:solid;
-    border-radius:10px;
-    border-color:rgba(235,235,234,0.5);
-    justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  width: 1099px;
+  border: solid;
+  border-radius: 10px;
+  border-color: rgba(235, 235, 234, 0.5);
+  justify-content: space-between;
 }
 .postItemBox + .postItemBox {
-    border-top:solid;
-    border-color:rgba(235,235,234,0.5);
+  border-top: solid;
+  border-color: rgba(235, 235, 234, 0.5);
 }
 .postItemBox {
-    border-color:rgba(235,235,234,0.5);
-    padding:10px;
-    padding-left:10px;
-    text-decoration: none;
+  border-color: rgba(235, 235, 234, 0.5);
+  padding: 10px;
+  padding-left: 10px;
+  text-decoration: none;
 }
 .postItemBox:nth-child(2n) {
-    background-color:rgba(28,28,28);
-    align-items: center;
+  background-color: rgba(28, 28, 28);
+  align-items: center;
 }
 .postWriterPubDateBox {
-    display:flex;
-    flex-direction: row;
-    margin-top:5px;
+  display: flex;
+  flex-direction: row;
+  margin-top: 5px;
 }
 h1 {
-    font-size: 30px;
-    color:#EBEAEA;
-    font-weight:bold;
+  font-size: 30px;
+  color: #ebeaea;
 }
 h2 {
-    font-size:20px;
-    color:#EBEAEA;
-    font-weight:bold;
+  font-size: 20px;
+  color: #ebeaea;
 }
 
 .writeButton {
-    width:93px;
-    height:35px;
-    margin-left:15px;
-}
-
-.writeButton__a {
-    text-decoration: none;
-    color: black;
-    border: 0;
-    outline: none;
-    cursor: pointer;
-    margin-top: 7px;
+  width: 93px;
+  height: 35px;
+  margin-left: 15px;
+  margin-top: 7px;
 }
 
 .title {
-    font-size:15px;
-    color:#EBEAEA;
-    font-weight:bold;
+  font-size: 15px;
+  color: #ebeaea;
+  font-weight: bold;
 }
 .content {
-    font-size:13px;
-    color:#EBEAEA;
+  font-size: 13px;
+  color: #ebeaea;
 }
 .writerImage {
-    width:14px;
-    height:14px;
-    border-radius: 100%;
-    margin-right:10px;
-    margin-top:3px;
+  width: 14px;
+  height: 14px;
+  border-radius: 100%;
+  margin-right: 10px;
+  margin-top: 3px;
 }
 .writer {
-    font-size:13px;
-    color:#999797;
+  font-size: 13px;
+  color: #999797;
 }
 .pubDate {
-    font-size:13px;
-    color:#999797;
-    margin-left:5px;
+  font-size: 13px;
+  color: #999797;
+  margin-left: 5px;
 }
