@@ -43,6 +43,14 @@ h2 {
     color:#EBEAEA;
     font-weight:bold;
 }
+
+.writeButton {
+    width:93px;
+    height:35px;
+    margin-left:15px;
+    margin-top:7px;
+}
+
 .title {
     font-size:15px;
     color:#EBEAEA;

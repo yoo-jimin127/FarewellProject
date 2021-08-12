@@ -1,25 +1,58 @@
 {% extends 'base.html' %}
 {% block content %} 
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    {% load static %}
+    <!--템플릿부분 시작-->
+    <link rel="icon" href="{% static 'fromFarewell.png' %}" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css"
+    />
+
+    <!--css 초기화-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css" />
+
+    <!-- Google 폰트 불러오기 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet" />
+
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'common.css' %}">
+    <link rel="stylesheet" href="{% static 'writePost.css' %}">
+
     <title>Document</title>
 </head>
 <body>
-    <h1>Write your post</h1>
-    <form action="{%url 'createBlog'%}" method="post">
-        {%csrf_token%}
-        <p>제목 : <input type="text" name = "title"> </p>
-        <p>작성자 : <input type="text" name = "writer"> </p>
-        <p>본문 : <textarea name="body" id="" cols="40" rows="20"></textarea> </p>
-        <button type="submit"> 작성하기 </button>
+    <div class="inner__content">
+    <form action=" ">
+        <div class="formBox">
+            <div>
+                <div class="titleFormBox">
+                   <input type="text" placeholder="글의 제목을 입력해주세요" class="title">
+                 </div>
 
-    </form> 
+                 <div class="writerFormBox">
+                    <input type="text" placeholder="작성자를 입력해주세요" class="writer">
+                  </div>
+
+                 <div class="contentFormBox">
+                  <textarea placeholder="내용을 작성해주세요" class="content" style="font-family: Noto Sans KR, sans-serif;font-size:15px;";></textarea>
+                </div>
+            </div>
+            <button type="submit"><input type="image" class="button" src="{% static 'submitButton.png' %}" /></button>
+        </div>
+    </form>
+
+    </div>
+    
 </body>
 </html>
-
-
 {% endblock %}
