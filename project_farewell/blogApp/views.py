@@ -4,7 +4,7 @@ from django.shortcuts import render
 from django.shortcuts import render,get_object_or_404, redirect         
 from django.utils import timezone        #pub_date를 위해 import
 from .models import Blog           # models.py의 blog와 Blog에서 import받음
-
+from .forms import BlogForm
 
 def mainBlog(request):
     blogs = Blog.objects.all()

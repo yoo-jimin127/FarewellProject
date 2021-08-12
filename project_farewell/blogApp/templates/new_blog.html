@@ -9,17 +9,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     {% load static %}
-    <!--템플릿부분 시작-->
+
     <link rel="icon" href="{% static 'fromFarewell.png' %}" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css"
     />
 
-    <!--css 초기화-->
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css" />
 
-    <!-- Google 폰트 불러오기 -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet" />
@@ -32,19 +31,20 @@
 </head>
 <body>
     <div class="inner__content">
-    <form action=" ">
+    <form class="writePostForm" action="{%url 'createBlog'%}" method="post">
+      {%csrf_token%}
         <div class="formBox">
             <div>
                 <div class="titleFormBox">
-                   <input type="text" placeholder="글의 제목을 입력해주세요" class="title">
+                   <input type="text" placeholder="글의 제목을 입력해주세요" class="title" name="title">
                  </div>
 
                  <div class="writerFormBox">
-                    <input type="text" placeholder="작성자를 입력해주세요" class="writer">
+                    <input type="text" placeholder="작성자를 입력해주세요" class="writer" name="writer">
                   </div>
 
                  <div class="contentFormBox">
-                  <textarea placeholder="내용을 작성해주세요" class="content" style="font-family: Noto Sans KR, sans-serif;font-size:15px;";></textarea>
+                  <textarea placeholder="내용을 작성해주세요" class="content" name="body" style="font-family: Noto Sans KR, sans-serif;font-size:15px;";></textarea>
                 </div>
             </div>
             <button type="submit"><input type="image" class="button" src="{% static 'submitButton.png' %}" /></button>

@@ -4,7 +4,7 @@
 <h1>Edit your post</h1>
 <form action="{%url 'updateBlog' blog.id%}" method="post">
     {%csrf_token%}
-    <p>제목 : <input type="text" name = "title" value = "{{blog.title}}" ></p> <!-- views.py의 edit함수 키값이 video니까 blog.title로  -->
+    <p>제목 : <input type="text" name = "title" value = "{{blog.title}}" ></p> 
     <p>작성자 : <input type="text" name = "writer" value ="{{blog.writer}}"></p>
     <p>본문 : <textarea name="body" id="" cols="40" rows="20"></textarea> </p>
     <button type="submit"> 작성하기 </button>

@@ -2,6 +2,7 @@
     padding-top:30px;
     padding-bottom:20px;
     margin-left: 20px;
+    display:flex;
 }
 .container {
     display:flex;
@@ -11,8 +12,6 @@
     border-radius:10px;
     border-color:rgba(235,235,234,0.5);
     justify-content: space-between;
-    margin-left: 250px;
-
 }
 .postItemBox + .postItemBox {
     border-top:solid;
@@ -48,7 +47,15 @@ h2 {
     width:93px;
     height:35px;
     margin-left:15px;
-    margin-top:7px;
+}
+
+.writeButton__a {
+    text-decoration: none;
+    color: black;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+    margin-top: 7px;
 }
 
 .title {
