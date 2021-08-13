@@ -47,7 +47,9 @@
                   <textarea placeholder="내용을 작성해주세요" class="content" name="body" style="font-family: Noto Sans KR, sans-serif;font-size:15px;";></textarea>
                 </div>
             </div>
-            <button type="submit" class="button"><input type="image" class="imgButton" src="{% static 'submitButton.png' %}" /></button>
+            <div class="submitButton">
+            <input type="image"  src="{% static 'submitButton.png' %}" alt="작성완료" style="width:110px; padding-bottom:30px;">
+            </div>
         </div>
     </form>
 
