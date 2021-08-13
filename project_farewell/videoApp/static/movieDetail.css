@@ -83,9 +83,14 @@
 .movie__side .movie__card .movie__describe .movie__describe__writer {
   margin-top: 5px;
   color: #999797;
+  text-decoration:none;
 }
 
 .movie__side .movie__card .movie__describe .movie__describe__pub_date {
   line-height: 1;
   color: #999797;
+}
+
+.movie__card {
+  text-decoration:none;
 }

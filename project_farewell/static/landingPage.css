@@ -1,5 +1,8 @@
-.headerBlank {
-  height: 60px;
+.bg__img {
+  position: absolute;
+  width: 1920px;
+  left: 50%;
+  margin-left: -960px;
 }
 
 .movie {
@@ -9,7 +12,7 @@
 }
 
 .movie .inner__content {
-  height: 500px;
+  height: 440px;
 }
 
 .movie__title {
@@ -216,6 +219,20 @@
   border-radius: 10px;
   background: rgba(0, 0, 0, 0.3);
   justify-content: space-between;
+  max-height: 375px;
+  overflow: auto;
+}
+
+.community__posts__wrapper::-webkit-scrollbar {
+  position: absolute;
+  right: -10px;
+  width: 10px;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.community__posts__wrapper::-webkit-scrollbar-thumb {
+  background-color: #999797;
+  border-radius: 5px;
 }
 
 .community__posts__wrapper .community__post + .community__post {
@@ -250,7 +267,7 @@
   width: 14px;
   height: 14px;
   border-radius: 100%;
-  margin-right: 10px;
+  margin-right: 5px;
   margin-top: 3px;
 }
 

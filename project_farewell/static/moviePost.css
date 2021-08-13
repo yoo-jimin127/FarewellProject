@@ -1,138 +1,173 @@
 .moviePostForm__wrapper {
-    width: 910px;
-    margin: 0 auto;
-    position: relative;
-  }
-  
-  .moviePostForm {
-    width: 100%;
-  }
-  
-  .moviePostForm__header {
-    width: 100%;
-    display: flex;
-    padding-top:80px;
-  }
-  
-  .moviePostForm__header .thumbnail__wrapper {
-    width: 248px;
-    height: 140px;
-    border-radius: 5px;
-    overflow: hidden;
-    background: rgba(255, 255, 255, 0.1);
-  }
-  
-  .moviePostForm__header .thumbnail__wrapper .thumbnail {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  
-  .moviePostForm__header__inputs {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    margin-left: 20px;
-  }
-  
-  .moviePostForm__header__inputs {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .moviePostForm__header__inputs input {
-    box-sizing: border-box;
-    width: 100%;
-    height: 100%;
-    outline: none;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 10px;
-    border: 0;
-    padding-left: 15px;
-    font-size: 15px;
-    color: #ebeaea;
-    font-family: "Noto Sans KR", sans-serif;
-  }
-  
-  .moviePostForm__header__inputs input[type="file"] {
-    display: none;
-  }
-  
-  .moviePostForm__header__inputs label {
-    box-sizing: border-box;
-    display: flex;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    outline: none;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 10px;
-    border: 0;
-    padding-left: 15px;
-    font-size: 15px;
-    color: #999797;
-    margin-top: 10px;
-    letter-spacing: -0.07em;
-  }
-  
-  .moviePostForm__header__inputs label .material-icons {
-    margin-right: 10px;
-  }
-  
-  .moviePostForm__header__inputs input::placeholder {
-    color: #999797;
-  }
-  
-  .moviePostForm__header__inputs input + input {
-    margin-top: 10px;
-  }
-  
-  .moviePostForm__main {
-    margin-top: 15px;
-    width: 100%;
-  }
-  
-  .moviePostForm__main .movie__preview {
-    width: 100%;
-    height: 553px;
-    background-image: url(../imgs/youtubeExplainImg.png);
-    background-size: cover;
-    border-radius: 10px;
-    overflow: hidden;
-  }
-  
-  .moviePostForm__main .movie__preview iframe {
-    width: 100%;
-    height: 553px;
-  }
-  
-  .moviePostForm__main textarea {
-    margin: 15px 0;
-    width: 100%;
-    min-height: 110px;
-    border: 1px solid rgba(235, 234, 234, 0.5);
-    box-sizing: border-box;
-    border-radius: 10px;
-    background-color: inherit;
-    outline: none;
-    resize: none;
-    overflow: hidden;
-    padding: 15px;
-    color: #ebeaea;
-    font-family: "Noto Sans KR", sans-serif;
-  }
-  
-  .moviePostForm__main textarea::placeholder {
-    color: #999797;
-  }
-  
-  .button {
-    width: 110px;
-    border: 0;
-    outline: 0;
-    position: absolute;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-  }
-  
+  width: 910px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.moviePostForm {
+  width: 100%;
+}
+
+.moviePostForm__header {
+  width: 100%;
+  display: flex;
+  padding-top: 80px;
+}
+
+.moviePostForm__header .thumbnail__wrapper {
+  width: 248px;
+  height: 140px;
+  border-radius: 5px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.moviePostForm__header .thumbnail__wrapper .thumbnail {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.moviePostForm__header__inputs {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+}
+
+.moviePostForm__header__inputs {
+  display: flex;
+  flex-direction: column;
+}
+
+.moviePostForm__header__inputs input {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  outline: none;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  border: 0;
+  padding-left: 15px;
+  font-size: 15px;
+  color: #ebeaea;
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+.moviePostForm__header__inputs input[type="file"] {
+  display: none;
+}
+
+.moviePostForm__header__inputs label {
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  outline: none;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  border: 0;
+  padding-left: 15px;
+  font-size: 15px;
+  color: #999797;
+  margin-top: 10px;
+  letter-spacing: -0.07em;
+}
+
+.moviePostForm__header__inputs label .material-icons {
+  margin-right: 10px;
+}
+
+.moviePostForm__header__inputs input::placeholder {
+  color: #999797;
+}
+
+.moviePostForm__header__inputs input + input {
+  margin-top: 10px;
+}
+
+.moviePostForm__main {
+  position: relative;
+  margin-top: 15px;
+  width: 100%;
+}
+
+#input__youtubeId {
+  box-sizing: border-box;
+  width: 100%;
+  height: 40px;
+  outline: none;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  border: 0;
+  padding-left: 15px;
+  font-size: 15px;
+  color: #ebeaea;
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+.moviePostForm__main .input_youtube_previewBtn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100px;
+  height: 40px;
+  background-color: #ff929e;
+  border: 0;
+  border-radius: 10px;
+  color: #ebeaea;
+  font-size: 15px;
+  font-weight: bold;
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+.moviePostForm__main .movie__preview {
+  width: 100%;
+  height: 553px;
+  margin-top: 10px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.moviePostForm__main .movie__preview iframe {
+  width: 100%;
+  height: 553px;
+}
+
+.moviePostForm__main textarea {
+  margin: 15px 0;
+  width: 100%;
+  min-height: 110px;
+  border: 1px solid rgba(235, 234, 234, 0.5);
+  box-sizing: border-box;
+  border-radius: 10px;
+  background-color: inherit;
+  outline: none;
+  resize: none;
+  overflow: hidden;
+  padding: 15px;
+  color: #ebeaea;
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+.moviePostForm__main textarea::placeholder {
+  color: #999797;
+}
+
+.moviePostForm__submitBtn {
+  width: 110px;
+  height: 35px;
+  border: 0;
+  outline: 0;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  padding: 0px;
+  cursor: pointer;
+}
+
+.moviePostForm__submitBtn img {
+  width: 110px;
+}

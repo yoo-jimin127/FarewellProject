@@ -32,13 +32,23 @@ inputThumbnailEl.addEventListener("change", (e) => {
 });
 
 /* 유튜브 링크 입력하면 미리보기 */
-const inputYoutubeIdEl = document.querySelector("#input__youtubeId");
-inputYoutubeIdEl.addEventListener("change", (e) => {
-  readYoutube(e.target.value);
+const inputYoutubePreviewBtn = document.querySelector(
+  ".moviePostForm__main .input_youtube_previewBtn"
+);
+inputYoutubePreviewBtn.addEventListener("click", (e) => {
+  e.preventDefault();
+  const inputYoutubeIdEl = document.querySelector("#input__youtubeId");
+  readYoutube(inputYoutubeIdEl.value);
 });
 
 function readYoutube(youtubeId) {
   const youtubePreviewElWrapper = document.querySelector(".movie__preview");
+  //설명 이미지 지우기
+  const youtubePreviewImg = document.querySelector(".movie__preview img");
+  if (youtubePreviewImg) {
+    youtubePreviewImg.remove();
+  }
+
   //기존 프리뷰 지우기
   const beforeYoutubePreviewEl = document.querySelector(
     ".movie__preview iframe"
@@ -49,6 +59,7 @@ function readYoutube(youtubeId) {
 
   const youtubePreviewEl = document.createElement("iframe");
   youtubePreviewEl.src = `https://www.youtube.com/embed/${youtubeId}`;
+  console.log(`https://www.youtube.com/embed/${youtubeId}`);
   youtubePreviewEl.title = "YouTube video player";
   youtubePreviewEl.frameborder = "0";
   youtubePreviewEl.allow =

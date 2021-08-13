@@ -1,87 +1,85 @@
-
-
 .pageInfo {
-    margin-bottom:20px;
-    display:flex;
-    flex-direction: column;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
 }
 .titleButtonBox {
-    display:flex;
-
+  display: flex;
 }
 .container2 {
-    display:flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-between;
-    justify-content: flex-start;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  justify-content: flex-start;
 }
 
 .movieItemBox {
-    width:345px;
-    height:298px;
-    text-decoration: none;
-    margin-bottom:10px;
-    padding:10px;
+  width: 345px;
+  height: 298px;
+  text-decoration: none;
+  margin-bottom: 10px;
+  padding: 10px;
 }
 
 .movieItemBoxText {
-    flex-direction: column;
-    padding-left:10px;
+  flex-direction: column;
+  padding-left: 10px;
 }
 
 .movieImage {
-    width:345px;
-    height:200px;
-    border-radius: 5px;
-    vertical-align: top;
+  width: 345px;
+  height: 200px;
+  border-radius: 5px;
+  vertical-align: top;
 }
 
 .writerImage {
-    border-radius:100%;
-    width:45px;
-    height:45px;
-
+  border-radius: 100%;
+  width: 45px;
+  height: 45px;
 }
 
 .movieInfo {
-    width:354px;
-    height:90px;
-    display:flex;
-    flex-direction: row;
-    padding-top:10px;
+  width: 354px;
+  height: 90px;
+  display: flex;
+  flex-direction: row;
+  padding-top: 10px;
 }
 
 h1 {
-    font-size:30px;
+  font-size: 30px;
 }
 
 h2 {
-    font-size:20px;
+  font-size: 20px;
 }
 
-p, h1, h2 {
-    color:#ebeaea;
+p,
+h1,
+h2 {
+  color: #ebeaea;
 }
 
 .title {
-    font-size:15px;
-    padding-bottom:5px;
+  font-size: 15px;
+  padding-bottom: 5px;
 }
 
 .writer {
-    color:#999797;
-    font-size:12px;
+  color: #999797;
+  font-size: 12px;
 }
 
 .pubDate {
-    color:#999797;
-    font-size:12px;
+  color: #999797;
+  font-size: 12px;
 }
 
 .writeButton {
-    width:93px;
-    height:35px;
-    margin-left:15px;
-    margin-top:7px;
+  width: 93px;
+  height: 35px;
+  margin-left: 15px;
+  margin-top: 7px;
 }
