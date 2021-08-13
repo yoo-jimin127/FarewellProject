@@ -45,7 +45,7 @@
           </div>
           <div class="movie__info">
             {% if video.image %}
-            <img class="profile__img" src="{% static 'exImg.png' %}" />
+            <img class="profile__img" src="{% static 'fromFarewell.png' %}" />
             {% endif %}
             <div class="movie__describe">
               <p class="movie__describe__title">{{video.title}}</p>
@@ -58,7 +58,11 @@
 
         <div class="movie__side">
           {%for video in videos%}
-          <a class="movie__card" href="{%url 'detailVideo' video.id %}" style="text-decoration: none; color:inherit;">
+          <a
+            class="movie__card"
+            href="{%url 'detailVideo' video.id %}"
+            style="text-decoration: none; color: inherit"
+          >
             <img src="{{video.image.url}}" alt="" />
             <div class="movie__describe">
               <p class="movie__describe__title">{{video.title}}</p>
