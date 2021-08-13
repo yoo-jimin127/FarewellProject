@@ -58,14 +58,14 @@
 
         <div class="movie__side">
           {%for video in videos%}
-          <div class="movie__card">
+          <a class="movie__card" href="{%url 'detailVideo' video.id %}">
             <img src="{{video.image.url}}" alt="" />
             <div class="movie__describe">
               <p class="movie__describe__title">{{video.title}}</p>
               <p class="movie__describe__writer">{{video.writer}}</p>
               <p class="movie__describe__pub_date">{{video.pub_date}}</p>
             </div>
-          </div>
+          </a>
           {% endfor %}
         </div>
       </div>
